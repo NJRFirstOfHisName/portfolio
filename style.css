@@ -52,7 +52,6 @@ img {
 }
 
 .battleship {
-  background-color: #f5fefd;
   box-shadow: 2px 2px 5px #0e9381;
 }
 
@@ -61,5 +60,9 @@ img {
 }
 
 .to-do {
-  background-color:;
+  box-shadow: 2px 2px 5px rgb(133, 133, 2);
+}
+
+.to-do .screenshot {
+  background-color: rgb(253, 253, 89);
 }
