@@ -66,3 +66,11 @@ img {
 .to-do .screenshot {
   background-color: rgb(253, 253, 89);
 }
+
+.weather {
+  box-shadow: 2px 2px 5px rgb(25, 234, 25);
+}
+
+.weather .screenshot {
+  background-color: rgb(111, 238, 106);
+}
