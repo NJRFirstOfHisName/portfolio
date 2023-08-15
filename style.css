@@ -1,32 +1,88 @@
-img {
-  width: 90%;
+:root {
+  --card-width: 325px;
+  --card-height: 500px;
+}
+
+body {
+  font-family: "Zilla Slab", serif;
+  margin: 0;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.headshot {
+  position: relative;
+  margin: auto;
+  width: fit-content;
+}
+
+.headshot img {
+  box-shadow: 2px 2px 5px gray;
+  object-fit: cover;
+  align-self: center;
+}
+
+.headshot h1 {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  color: rgb(155, 155, 155);
+  font-size: 64px;
+}
+
+header h2 {
+  text-align: center;
+}
+
+header p {
+  width: var(--card-width);
+  margin: auto;
+}
+
+main {
+  max-width: var(--card-width);
+  margin: auto;
+}
+
+main h1 {
+  text-align: center;
+  border-top: 2px solid black;
+  position: relative;
+  width: 75%;
+  left: 12%;
 }
 
 .card {
-  margin: 2vmin;
+  margin: 1em;
   display: grid;
   text-align: center;
-  place-items: center;
   grid-template-columns: 1fr 1fr;
   box-shadow: 2px 2px 5px black;
   font-size: large;
+  max-width: var(--card-width);
 }
 
 .screenshot {
-  padding: 2vmin;
+  padding: 1em;
   grid-column: 1/3;
+}
+
+.screenshot img {
+  width: 90%;
 }
 
 .card h2 {
   font-size: 20pt;
   font-weight: bolder;
   grid-column: 1/3;
-  margin: 2vmin;
+  margin: 0.5em;
 }
 
 .card p {
   grid-column: 1/3;
-  margin: 2vmin;
+  margin: 0.5em;
 }
 
 .links {
@@ -35,8 +91,8 @@ img {
   display: flex;
   align-items: middle;
   justify-self: end;
-  padding: 1vmin;
-  gap: 2vmin;
+  padding: 0.5em;
+  gap: 0.5em;
 }
 
 .links a {
@@ -68,9 +124,36 @@ img {
 }
 
 .weather {
-  box-shadow: 2px 2px 5px rgb(25, 234, 25);
+  box-shadow: 2px 2px 5px rgb(15, 129, 15);
 }
 
 .weather .screenshot {
   background-color: rgb(111, 238, 106);
+}
+
+footer h1 {
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  header p {
+    width: 75%;
+  }
+
+  main {
+    max-width: 100vw;
+  }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    width: var(--card-width);
+    height: var(--card-height);
+    margin: 1em;
+  }
 }
